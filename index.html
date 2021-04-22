@@ -6,8 +6,29 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-   <h1>This is a taco</h1>
-   <p>Yummy</p>
-   <img src="Image/Taco_Crispy_Beef_990x725.jpeg" alt="a taco">
+   <h1 class="form-container">Behold the almighty Cripsy Beef Taco</h1>
+   <img class="image-center" src="Image/Taco_Crispy_Beef_990x725.jpeg" id="taco" alt="a taco" width="200">
+
+   
+
+   <div class="form-container">
+    <p>Do you like this taco?</p>
+       <input type="checkbox" name="yes" id="yes">
+       <label for="yes">Yes</label>
+       <input type="checkbox" name="no" id="no">
+       <label for="no">No</label>
+       <input type="submit" value="submit this bitch">
+    </div>
+
+    <script>
+        var tacoimg = document.getElementById('taco');
+        var rotation = 0;
+
+        tacoimg.onclick = function() {
+            rotation += 45;
+            rotaion = rotation % 360;
+            tacoimg.style.transform = "rotate(" + rotation + "deg)";
+        }
+    </script>
   </body>
 </html>
